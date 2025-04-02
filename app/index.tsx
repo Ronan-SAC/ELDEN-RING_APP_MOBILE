@@ -13,8 +13,8 @@ const App = () => {
         <View className="flex-1 items-center justify-center">
           <View className="mt-36">
             <TouchableOpacity
-              onPress={() => router.push('/routes/menu')}
-              className="px-6 py-3 rounded-lg border-2 border-yellow-700 shadow-lg active:bg-yellow-600"
+              onPress={() => router.push('./views/menu')}
+              className="px-6 py-3 rounded-lg border-2 border-yellow-700 shadow-lg active:bg-yellow-600 mt-52"
             >
               <Text className="text-center text-white font-semibold">
                 Elden Ring Wiki
