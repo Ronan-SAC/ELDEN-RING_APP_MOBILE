@@ -1,7 +1,7 @@
 import { View, Text, TouchableOpacity, ScrollView, Image } from "react-native";
 import { useRouter } from "expo-router";
 
-export default function Menu() {
+export default function Boss() {
   const router = useRouter();
 
   const bossOptions = [
