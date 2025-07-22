@@ -1,5 +1,6 @@
-import { View, Text, TouchableOpacity, Image, ScrollView } from "react-native";
 import { useRouter } from "expo-router";
+import { Image, ScrollView, Text, TouchableOpacity, View } from "react-native";
+import React = require("react");
 
 export default function MainMenu() {
   const router = useRouter();
@@ -13,12 +14,12 @@ export default function MainMenu() {
       <ScrollView
         contentContainerStyle={{
           alignItems: "center",
-          paddingBottom: 20, // Extra padding at the bottom for better UX
+          paddingBottom: 20
         }}
-        showsVerticalScrollIndicator={false} // Hide scroll bar for cleaner look
+        showsVerticalScrollIndicator={false}
       >
         <TouchableOpacity
-          onPress={() => router.push("/views/boss/boss_menu")}
+          onPress={() => router.push("./views/boss")}
           className="bg-gray-800 p-5 rounded-lg mb-5 w-full max-w-xs items-center"
         >
           <Text className="text-yellow-300 text-2xl text-center mb-5">
@@ -34,7 +35,7 @@ export default function MainMenu() {
         </TouchableOpacity>
 
         <TouchableOpacity
-          onPress={() => router.push("/views/items/items_menu")}
+          onPress={() => router.push("./views/items")}
           className="bg-gray-800 p-5 rounded-lg mb-5 w-full max-w-xs items-center"
         >
           <Text className="text-yellow-300 text-2xl text-center mb-5">

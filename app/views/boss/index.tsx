@@ -1,5 +1,6 @@
-import { View, Text, TouchableOpacity, ScrollView, Image } from "react-native";
 import { useRouter } from "expo-router";
+import { Image, ScrollView, Text, TouchableOpacity, View } from "react-native";
+import React = require("react");
 
 export default function Boss() {
   const router = useRouter();

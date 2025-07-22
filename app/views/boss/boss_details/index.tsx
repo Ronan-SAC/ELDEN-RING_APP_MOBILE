@@ -1,11 +1,12 @@
-import { useEffect, useState } from "react";
-import { View, Text, Image, ScrollView } from "react-native";
 import { useLocalSearchParams } from "expo-router";
+import { useEffect, useState } from "react";
+import { Image, ScrollView, Text, View } from "react-native";
+import React = require("react");
 
 export default function BossDetails() {
   const [data, setData] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
-  const { bossQuery } = useLocalSearchParams(); // Get the query param from navigation
+  const { bossQuery } = useLocalSearchParams();
 
   useEffect(() => {
     const fetchBossData = async () => {
@@ -24,7 +25,7 @@ export default function BossDetails() {
       }
     };
     fetchBossData();
-  }, [bossQuery]); // Re-fetch when bossQuery changes
+  }, [bossQuery]);
 
   return (
     <View className="flex-1 bg-black">
