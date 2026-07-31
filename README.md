@@ -1,50 +1,75 @@
-# Welcome to your Expo app 👋
+# Elden Ring Compendium
 
-This is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).
+Um aplicativo de compêndio/wiki sobre o jogo **Elden Ring**, desenvolvido com **React Native** e **Expo**, que consome a [Elden Ring Fan API](https://eldenring.fanapis.com/).
 
-## Get started
+## Funcionalidades
 
-1. Install dependencies
+- Menu principal com categorias navegáveis
+- Listagem de itens por categoria
+- Detalhes de cada item
+- 15 categorias disponíveis:
+
+  | Categoria | Descrição |
+  |---|---|
+  | Legendary Bosses | Chefes lendários |
+  | Weapons | Armas |
+  | Armor | Armaduras |
+  | Talismans | Talismãs |
+  | Sorceries | Feitiços |
+  | Incantations | Invocações |
+  | Ashes of War | Cinzas de Guerra |
+  | Key Items | Itens-chave |
+  | Shields | Escudos |
+  | Ammo | Munições |
+  | Spirit Summons | Invocações espirituais |
+  | Classes | Classes |
+  | Creatures | Criaturas |
+  | NPCs | Personagens não jogáveis |
+  | Locations | Localizações |
+
+## Tecnologias
+
+- [Expo](https://expo.dev) (SDK 52) com [Expo Router](https://docs.expo.dev/router/introduction) (file-based routing)
+- [React Native](https://reactnative.dev) 0.76
+- [NativeWind](https://www.nativewind.dev) (Tailwind CSS) + TypeScript
+- Arquitetura **MVVM** (Model-View-ViewModel):
+  - `models/` — modelos de dados
+  - `services/` — camada de acesso à API (repositórios)
+  - `viewmodels/` — hooks de gerenciamento de estado
+  - `app/views/` — telas (views)
+  - `components/` — componentes reutilizáveis
+
+## Como executar
+
+1. Instale as dependências
 
    ```bash
    npm install
    ```
 
-2. Start the app
+2. Inicie o app
 
    ```bash
-    npx expo start
+   npx expo start
    ```
 
-In the output, you'll find options to open the app in a
+3. No terminal, escolha como abrir o app:
+   - **[development build](https://docs.expo.dev/develop/development-builds/introduction/)**
+   - **[Android emulator](https://docs.expo.dev/workflow/android-studio-emulator/)**
+   - **[iOS simulator](https://docs.expo.dev/workflow/ios-simulator/)**
+   - **[Expo Go](https://expo.dev/go)**
 
-- [development build](https://docs.expo.dev/develop/development-builds/introduction/)
-- [Android emulator](https://docs.expo.dev/workflow/android-studio-emulator/)
-- [iOS simulator](https://docs.expo.dev/workflow/ios-simulator/)
-- [Expo Go](https://expo.dev/go), a limited sandbox for trying out app development with Expo
+## Scripts
 
-You can start developing by editing the files inside the **app** directory. This project uses [file-based routing](https://docs.expo.dev/router/introduction).
+| Comando | Descrição |
+|---|---|
+| `npm start` | Inicia o Expo |
+| `npm run android` | Inicia no Android |
+| `npm run ios` | Inicia no iOS |
+| `npm run web` | Inicia na web |
+| `npm run lint` | Executa o ESLint |
+| `npm test` | Executa os testes (Jest) |
 
-## Get a fresh project
+## API
 
-When you're ready, run:
-
-```bash
-npm run reset-project
-```
-
-This command will move the starter code to the **app-example** directory and create a blank **app** directory where you can start developing.
-
-## Learn more
-
-To learn more about developing your project with Expo, look at the following resources:
-
-- [Expo documentation](https://docs.expo.dev/): Learn fundamentals, or go into advanced topics with our [guides](https://docs.expo.dev/guides).
-- [Learn Expo tutorial](https://docs.expo.dev/tutorial/introduction/): Follow a step-by-step tutorial where you'll create a project that runs on Android, iOS, and the web.
-
-## Join the community
-
-Join our community of developers creating universal apps.
-
-- [Expo on GitHub](https://github.com/expo/expo): View our open source platform and contribute.
-- [Discord community](https://chat.expo.dev): Chat with Expo users and ask questions.
+O app consome a [Elden Ring Fan API](https://eldenring.fanapis.com/) através dos repositórios em `services/`, utilizando `fetch` para buscar os dados por nome ou a lista completa (limite de 100 itens por categoria).
