@@ -82,7 +82,7 @@ export const DetailItemView = ({
   return (
     <View className="px-5 pt-3">
       <View className="mb-4">
-        <IconButton name="arrow-back" onPress={() => router.canGoBack()} />
+        <IconButton name="arrow-back" onPress={() => router.back()} />
       </View>
 
       {image ? (
