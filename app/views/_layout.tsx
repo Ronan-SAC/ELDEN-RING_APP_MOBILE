@@ -1,4 +1,4 @@
-import { Tabs } from "expo-router";
+import { Tabs, Stack } from "expo-router";
 import { Image, View } from "react-native";
 import { Ionicons } from "@expo/vector-icons";
 import React from 'react';
@@ -39,14 +39,6 @@ const hiddenScreens = [
 export default function RootLayout() {
   return (
     <View className="flex-1 bg-elden-bg">
-      <View className="py-3 px-5 items-center border-b border-elden-line bg-black/50">
-        <Image
-          source={{ uri: "https://logos-world.net/wp-content/uploads/2023/09/Elden-Ring-Logo.png" }}
-          className="w-44 h-11"
-          resizeMode="contain"
-        />
-      </View>
-
       <View className="flex-1">
         <Tabs
           screenOptions={{

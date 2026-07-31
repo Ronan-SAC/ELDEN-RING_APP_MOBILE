@@ -25,15 +25,20 @@ export const EntityListView = <T extends { name: string; image?: string | null }
 }: EntityListViewProps<T>) => {
   const [query, setQuery] = useState("");
 
+  const uniqueOptions = useMemo(() => {
+    const seen = new Set<string>();
+    return options.filter((item) => {
+      if (seen.has(item.name)) return false;
+      seen.add(item.name);
+      return true;
+    });
+  }, [options]);
+
   const filtered = useMemo(() => {
     const q = query.trim().toLowerCase();
-    if (!q) return options;
-    return options.filter((item) => {
-      const name = item.name.toLowerCase();
-      const sub = (getSubtitle?.(item) ?? "").toLowerCase();
-      return name.includes(q) || sub.includes(q);
-    });
-  }, [options, query, getSubtitle]);
+    if (!q) return uniqueOptions;
+    return uniqueOptions.filter((item) => item.name.toLowerCase().includes(q));
+  }, [uniqueOptions, query]);
 
   return (
     <View className="flex-1 bg-elden-bg pt-4">
@@ -48,7 +53,7 @@ export const EntityListView = <T extends { name: string; image?: string | null }
       </View>
 
       <View className="px-5 mb-1 flex-row flex-wrap gap-2">
-        <Pill label={`All · ${options.length}`} />
+        <Pill label={`All · ${uniqueOptions.length}`} />
         {query.trim() ? (
           <Pill label={`Results · ${filtered.length}`} variant="tag" />
         ) : null}
@@ -72,7 +77,6 @@ export const EntityListView = <T extends { name: string; image?: string | null }
               image={item.image}
               title={item.name}
               subtitle={getSubtitle?.(item)}
-              meta={getMeta?.(item)}
               onPress={() => onSelect(item)}
             />
           ))

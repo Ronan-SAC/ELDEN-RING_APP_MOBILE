@@ -41,7 +41,5 @@ export const EntityRow = ({
         </Text>
       ) : null}
     </View>
-
-    {meta ? <Text className="font-mono text-[12px] text-elden-muted">{meta}</Text> : null}
   </TouchableOpacity>
 );
