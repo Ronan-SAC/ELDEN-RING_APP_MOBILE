@@ -1,6 +1,6 @@
-import "@/app/globals.css";
 import { Tabs } from "expo-router";
 import { Image, View } from "react-native";
+import { Ionicons } from "@expo/vector-icons";
 import React from 'react';
 
 const hiddenScreens = [
@@ -38,11 +38,11 @@ const hiddenScreens = [
 
 export default function RootLayout() {
   return (
-    <View className="flex-1 bg-[#0a0a0a]">
-      <View className="p-5 items-center border-b border-yellow-900/30 bg-black/50">
+    <View className="flex-1 bg-elden-bg">
+      <View className="py-3 px-5 items-center border-b border-elden-line bg-black/50">
         <Image
           source={{ uri: "https://logos-world.net/wp-content/uploads/2023/09/Elden-Ring-Logo.png" }}
-          className="w-full h-16"
+          className="w-44 h-11"
           resizeMode="contain"
         />
       </View>
@@ -52,24 +52,20 @@ export default function RootLayout() {
           screenOptions={{
             headerShown: false,
             tabBarStyle: {
-              backgroundColor: "#050505",
+              backgroundColor: "#1b1610",
               borderTopWidth: 1,
-              borderTopColor: "rgba(113, 63, 18, 0.5)", // yellow-900/50
+              borderTopColor: "#302a23",
             },
-            tabBarActiveTintColor: "#eab308",
-            tabBarInactiveTintColor: "#52525b",
+            tabBarActiveTintColor: "#d7aa42",
+            tabBarInactiveTintColor: "#8d8579",
           }}
         >
           <Tabs.Screen
             name="index"
             options={{
-              href: "./",
-              tabBarLabel: "",
-              tabBarIcon: () => (
-                <Image
-                  source={{ uri: "https://i.pinimg.com/736x/43/8c/dd/438cdde430a3926d0a8b29403016688e.jpg" }}
-                  className="w-8 h-8 mt-2"
-                />
+              tabBarLabel: "Compendium",
+              tabBarIcon: ({ color }) => (
+                <Ionicons name="book-outline" size={22} color={color} />
               ),
             }}
           />

@@ -11,4 +11,7 @@ export interface Spirit {
 export interface SpiritOption {
   name: string;
   image: string;
+  description?: string;
+  fpCost?: number;
+  hpCost?: number;
 }

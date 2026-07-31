@@ -10,4 +10,8 @@ export interface Npc {
 export interface NpcOption {
   name: string;
   image: string;
+  description?: string;
+  location?: string;
+  quote?: string;
+  role?: string;
 }

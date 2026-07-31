@@ -17,4 +17,7 @@ export interface Armor {
 export interface ArmorOption {
   name: string;
   image: string;
+  description?: string;
+  category?: string;
+  weight?: number;
 }

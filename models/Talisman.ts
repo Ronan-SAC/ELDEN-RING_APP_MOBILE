@@ -9,4 +9,6 @@ export interface Talisman {
 export interface TalismanOption {
   name: string;
   image: string;
+  description?: string;
+  effects?: string;
 }

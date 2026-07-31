@@ -16,4 +16,6 @@ export interface Ammo {
 export interface AmmoOption {
   name: string;
   image: string;
+  description?: string;
+  type?: string;
 }

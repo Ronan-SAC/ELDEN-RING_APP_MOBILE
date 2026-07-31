@@ -18,4 +18,7 @@ export interface Sorcery {
 export interface SorceryOption {
   name: string;
   image: string;
+  description?: string;
+  type?: string;
+  cost?: number;
 }

@@ -21,4 +21,6 @@ export interface EldenClass {
 export interface ClassOption {
   name: string;
   image: string;
+  description?: string;
+  stats?: ClassStats;
 }

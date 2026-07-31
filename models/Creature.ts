@@ -10,4 +10,6 @@ export interface Creature {
 export interface CreatureOption {
   name: string;
   image: string;
+  description?: string;
+  location?: string;
 }

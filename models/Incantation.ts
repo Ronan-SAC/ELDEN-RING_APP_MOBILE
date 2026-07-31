@@ -18,4 +18,7 @@ export interface Incantation {
 export interface IncantationOption {
   name: string;
   image: string;
+  description?: string;
+  type?: string;
+  cost?: number;
 }

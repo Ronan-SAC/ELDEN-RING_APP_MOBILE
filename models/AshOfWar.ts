@@ -10,4 +10,7 @@ export interface AshOfWar {
 export interface AshOfWarOption {
   name: string;
   image: string;
+  description?: string;
+  affinity?: string;
+  skill?: string;
 }

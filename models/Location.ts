@@ -8,4 +8,6 @@ export interface Location {
 export interface LocationOption {
   name: string;
   image: string;
+  description?: string;
+  region?: string;
 }

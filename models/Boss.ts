@@ -12,4 +12,7 @@ export interface Boss {
 export interface BossOption {
   name: string;
   image: string;
+  description?: string;
+  region?: string;
+  location?: string;
 }

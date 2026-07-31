@@ -10,4 +10,6 @@ export interface Item {
 export interface ItemOption {
     name: string;
     image: string;
+    description?: string;
+    type?: string;
 }

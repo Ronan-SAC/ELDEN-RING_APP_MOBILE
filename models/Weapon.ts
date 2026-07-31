@@ -24,4 +24,7 @@ export interface Weapon {
 export interface WeaponOption {
   name: string;
   image: string;
+  description?: string;
+  category?: string;
+  weight?: number;
 }

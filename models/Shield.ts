@@ -24,4 +24,7 @@ export interface Shield {
 export interface ShieldOption {
   name: string;
   image: string;
+  description?: string;
+  category?: string;
+  weight?: number;
 }
