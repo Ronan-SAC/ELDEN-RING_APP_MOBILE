@@ -1,6 +1,6 @@
 import { View, ScrollView, Text, Image } from "react-native";
 import { useLocalSearchParams } from "expo-router";
-import React = require('react');
+import React from 'react';
 import { useBossDetailsViewModel } from "../../viewmodels/useBossDetailsViewModel";
 import { LoadingView } from "../../components/LoadingView";
 

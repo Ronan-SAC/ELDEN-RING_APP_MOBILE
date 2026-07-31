@@ -1,6 +1,6 @@
 import { View, ScrollView, Text } from "react-native";
 import { useRouter } from "expo-router";
-import React = require('react');
+import React from 'react';
 import { useBossListViewModel } from "../../viewmodels/useBossListViewModel";
 import { BossCard } from "../../components/BossCard";
 import { LoadingView } from "../../components/LoadingView";

@@ -1,10 +1,6 @@
 import { useState, useEffect } from 'react';
 import { getBossOptions } from '../services/bossRepository';
-
-interface BossOption {
-  name: string;
-  image: string;
-}
+import { BossOption } from '../models/Boss';
 
 export const useBossListViewModel = () => {
   const [bossOptions, setBossOptions] = useState<BossOption[]>([]);

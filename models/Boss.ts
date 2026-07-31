@@ -8,3 +8,8 @@ export interface Boss {
   healthPoints: string;
   drops: string[];
 }
+
+export interface BossOption {
+  name: string;
+  image: string;
+}

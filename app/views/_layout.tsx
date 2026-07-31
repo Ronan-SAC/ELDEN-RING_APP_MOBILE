@@ -1,7 +1,40 @@
 import "@/app/globals.css";
 import { Tabs } from "expo-router";
 import { Image, View } from "react-native";
-import React = require('react');
+import React from 'react';
+
+const hiddenScreens = [
+  "AmmoDetailsView",
+  "AmmoListView",
+  "ArmorDetailsView",
+  "ArmorListView",
+  "AshOfWarDetailsView",
+  "AshOfWarListView",
+  "BossDetailsView",
+  "BossListView",
+  "ClassDetailsView",
+  "ClassListView",
+  "CreatureDetailsView",
+  "CreatureListView",
+  "IncantationDetailsView",
+  "IncantationListView",
+  "ItemsDetailsView",
+  "ItemsListView",
+  "LocationDetailsView",
+  "LocationListView",
+  "NpcDetailsView",
+  "NpcListView",
+  "ShieldDetailsView",
+  "ShieldListView",
+  "SorceryDetailsView",
+  "SorceryListView",
+  "SpiritDetailsView",
+  "SpiritListView",
+  "TalismanDetailsView",
+  "TalismanListView",
+  "WeaponDetailsView",
+  "WeaponListView",
+];
 
 export default function RootLayout() {
   return (
@@ -30,6 +63,7 @@ export default function RootLayout() {
           <Tabs.Screen
             name="index"
             options={{
+              href: "./",
               tabBarLabel: "",
               tabBarIcon: () => (
                 <Image
@@ -39,24 +73,15 @@ export default function RootLayout() {
               ),
             }}
           />
-          <Tabs.Screen
-            name="BossListView"
-            options={{
-              href: null,
-            }}
-          />
-          <Tabs.Screen
-            name="BossDetailsView"
-            options={{
-              href: null,
-            }}
-          />
-          <Tabs.Screen
-            name="ItemsView"
-            options={{
-              href: null,
-            }}
-          />
+          {hiddenScreens.map((name) => (
+            <Tabs.Screen
+              key={name}
+              name={name}
+              options={{
+                href: null,
+              }}
+            />
+          ))}
         </Tabs>
       </View>
     </View>

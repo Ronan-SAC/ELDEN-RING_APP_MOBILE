@@ -1,6 +1,6 @@
 import { router } from 'expo-router';
-import { ImageBackground, Text, TouchableOpacity, View, Image } from 'react-native';
-import React = require('react');
+import { ImageBackground, Text, TouchableOpacity, View } from 'react-native';
+import React from 'react';
 
 const App = () => {
   return (
@@ -12,11 +12,6 @@ const App = () => {
       >
         <View className="flex-1 bg-black/40 items-center justify-end pb-24">
           <View className="items-center px-6 w-full">
-            <Image
-              source={{ uri: "https://logos-world.net/wp-content/uploads/2023/09/Elden-Ring-Logo.png" }}
-              className="w-full h-32 mb-10"
-              resizeMode="contain"
-            />
             <TouchableOpacity
               onPress={() => router.push('./views')}
               className="w-full bg-yellow-900/90 px-6 py-4 rounded-xl border border-yellow-600 shadow-xl"

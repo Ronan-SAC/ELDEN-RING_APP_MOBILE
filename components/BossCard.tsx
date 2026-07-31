@@ -1,4 +1,4 @@
-import React = require('react');
+import React from 'react';
 import { TouchableOpacity, Text, Image } from 'react-native';
 
 interface BossCardProps {

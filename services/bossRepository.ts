@@ -1,10 +1,5 @@
 import { fetchAllBosses, fetchBossByName } from './api';
-import { Boss } from '../models/Boss';
-
-interface BossOption {
-  name: string;
-  image: string;
-}
+import { Boss, BossOption } from '../models/Boss';
 
 export const getBossOptions = (): Promise<BossOption[]> => fetchAllBosses();
 
